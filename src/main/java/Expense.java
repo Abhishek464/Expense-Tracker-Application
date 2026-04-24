@@ -1,36 +1,31 @@
+
 import jakarta.persistence.*;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.UUID;
 
+@Getter
+@Setter
 @Entity
-@Table(name = "expenses")
 public class Expense {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue
     private UUID id;
 
-    // Use BigDecimal for exact financial calculations
-    @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal amount;
-
-    @Column(nullable = false)
     private String category;
-
     private String description;
+    private LocalDate date;
 
-    @Column(nullable = false)
-    private LocalDate expenseDate;
-
-    @CreationTimestamp
     private Instant createdAt;
 
-    // The secret sauce for the "network retry" requirement
-    @Column(unique = true, nullable = false)
+    @Column(unique = true)
     private String idempotencyKey;
 
-    // Getters, Setters, Constructors
+    // getters & setters
 }
