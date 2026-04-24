@@ -5,7 +5,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class DTO {
+public class ExpenseCreateRequest {
 
     @NotNull
     @DecimalMin("0.01")
