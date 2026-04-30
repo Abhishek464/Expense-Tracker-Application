@@ -14,7 +14,7 @@ Sorting & filtering support
 🔍 Search & Filtering
 Filter by date range
 Filter by category
-Sort by amount/date
+
 🌐 RESTful APIs
 Clean and scalable API design
 Easily integrable with frontend (React/Vercel)
