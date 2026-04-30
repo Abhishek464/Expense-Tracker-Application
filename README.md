@@ -3,7 +3,7 @@
 Expense Tracker Application (Backend)
 
 A robust Expense Tracker backend application built using Java, Spring Boot, and REST APIs to manage personal finances efficiently.
-It enables users to track, categorize, and analyze expenses with a scalable and production-ready architecture.
+It enables users to track, filter expenses with a scalable and production-ready architecture.
 
 🚀 Features
 💵 Expense Management
@@ -23,7 +23,6 @@ Backend: Java, Spring Boot
 Database: H2 / MySQL (configurable)
 ORM: Spring Data JPA
 Build Tool: Maven
-API Testing: Postman
 Deployment: AWS EC2
 📁 Project Structure
 src/
@@ -33,7 +32,7 @@ src/
  ├── model/entity/     # JPA Entities
  ├── dto/              # Data Transfer Objects
  ├── config/           # Security & App Config
- └── exception/        # Global Exception Handling
+
 ⚙️ Getting Started
 1. Clone the Repository
 git clone https://github.com/Abhishek464/Expense-Tracker-Application.git
@@ -91,6 +90,3 @@ Deployment done manually to save time during the evaluation phase.
 No Dockerization
 Focused on application logic rather than containerization for faster delivery.
 
-App will start at:
-
-http://localhost:8080
